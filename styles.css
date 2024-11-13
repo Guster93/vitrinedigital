@@ -1,0 +1,208 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #303030;
+}
+
+.vitrine-digital {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Estilos para o cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 50px;
+    color: #00FF87;
+    font-weight: bold;
+}
+
+.header h1 span {
+    color: #303030;
+}
+
+.header h2 {
+    font-size: 40px;
+    color: #00FF87;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px #303030;
+}
+
+.header p {
+    font-size: 20px;
+    color: #303030;
+    background-color: #00FF87;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Conteúdo principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.address {
+    font-size: 20px;
+    color: #303030;
+    background-color: #00FF87;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.description {
+    background-color: #00FF87;
+    padding: 20px 20px 10px; /* Reduzi o padding inferior */
+    color: #303030;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Adiciona um espaçamento menor entre os elementos internos */
+}
+
+
+.contact {
+    font-size: 30px;
+    color: #00FF87;
+    background-color: #303030;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para os serviços */
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.service {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #00FF87;
+}
+
+.service h3 {
+    font-size: 22px;
+    color: #303030;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.service p {
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Estilo do Formulário de Contato */
+.contact-form {
+    background-color: #303030;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-form h3 {
+    color: #00FF87;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    color: #00FF87;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #303030;
+}
+
+.contact-form button {
+    background-color: #00FF87;
+    color: #303030;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #00cc6a;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header h1 {
+        font-size: 64px;
+    }
+
+    .header h2 {
+        font-size: 48px;
+    }
+
+    .header p {
+        font-size: 24px;
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .description, .services {
+        width: 48%;
+    }
+}
