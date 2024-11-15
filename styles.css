@@ -73,7 +73,7 @@ body {
 }
 .description {
     background-color: #00FF87;
-    padding: 20px 20px 10px; /* Reduzi o padding inferior */
+    padding: 20px;
     color: #303030;
     font-size: 20px;
     font-weight: bold;
@@ -82,20 +82,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* Adiciona um espaçamento menor entre os elementos internos */
+    gap: 10px;
 }
 
 
 .contact {
-    font-size: 30px;
+    font-size: 18px;
     color: #00FF87;
     background-color: #303030;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 5px;
-    margin-top: 10px;
     font-weight: bold;
+    text-align: center;
+    width: fit-content;
 }
-
 /* Estilos para os serviços */
 .services {
     display: grid;
@@ -178,31 +178,59 @@ body {
 }
 
 /* Responsividade */
-@media (min-width: 768px) {
-    .services {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
     .header h1 {
-        font-size: 64px;
+        font-size: 40px;
     }
 
     .header h2 {
-        font-size: 48px;
+        font-size: 30px;
     }
 
     .header p {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .description {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .contact {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .address {
+        font-size: 14px;
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Altera para uma coluna em telas menores */
+        gap: 15px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form h3 {
         font-size: 24px;
     }
 
-    .content {
-        flex-direction: row;
-        justify-content: space-between;
+    .contact-form label {
+        font-size: 16px;
     }
 
-    .description, .services {
-        width: 48%;
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 16px;
+        padding: 10px 15px;
     }
 }
